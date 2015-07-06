@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ProductHunt</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<header class="main-header">
+
+    <div class="top-header">
+
+      <div class="content-wrap group">
+
+          <div class="logo">
+            <h1>Product Hunt</h1>
+          </div>
+
+          <np class="add-new-post"><%= link_to '+', new_post_path %></np>
+          <a  class="login">Log in</a>
+          
+          <input type="search" class="search" placeholder="Search for a product...">
+     
+      </div>
+
+    </div>
+
+    <nav class="main-nav">
+
+      <div class="content-wrap">
+
+        <ul class="main-nav-links group">
+          <a href="#"><li class="active">TECH</li></a>
+          <a href="#"><li id="games">GAMES<sup>&beta;</sup></li></a>
+          <a href="#"><li id="collections">COLLECTIONS</li></a>
+          <a href="#"><li id="top">TOP POSTS</li></a>
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+<%= yield %>
+
+</body>
+</html>

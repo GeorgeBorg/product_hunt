@@ -1,0 +1,65 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Product Hunt</title>
+
+  <!--<script src="http://use.typekit.net/koq1kyb.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>-->
+
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <main class="main-content">
+
+    <div class="content-wrap">
+
+      <section class="day">
+
+        <header class="day-header">
+          <h2>Today <span class="subtext"></span></h2>
+        </header>
+
+
+          <% @posts.each do |post| %>
+
+            <div class="post group">
+
+              <a href = "#">
+                <div class="vote-wrap">
+                  &#9650;
+                  <br>
+                  <span class="votes">999</span>
+                </div>
+              </a>
+
+              <div class="post-content">
+                <a href="http://theeternalarchive.com/">
+                  <h3 class="post-title"><%= post.title %></h3>
+                  <p class="post-description"><%= post.description %></p>
+                </a>
+              </div>
+
+              <div class="post-meta">
+                <span class="post-comments">29</span>
+                <div class="avatar">
+                  <div class="bio">
+                    <img src="https://gravatar.com/avatar/28683d49924b65a841927ca2ab239ec2.png" alt="post-creator" class="post-creator-bio">
+                    <h4> Tom </h4>
+                  </div>
+                  <img src="https://gravatar.com/avatar/28683d49924b65a841927ca2ab239ec2.png" alt="post-creator" class="post-creator">
+                </div>
+              </div>
+
+
+            </div>
+
+          <% end %>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
