@@ -41,6 +41,7 @@
               <% end %>
 
              <ep><%= link_to 'Edit', edit_post_path(post) %></ep>
+             <dp><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></dp>
               <div class="post-meta">
                 <span class="post-comments">29</span>
                 <div class="avatar">
